@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ecf0f3;
+            font-weight: bolder;
+        }
+
+        .main {
+            background: #ecf0f3;
+            width: 40%;
+            height: 50%;
+            text-align: center;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+            padding: auto;
+            ;
+
+        }
+
+        input {
+            border: none;
+            outline: none;
+            background: #ecf0f3;
+            padding: 10px;
+            border-radius: 50px;
+            box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+            font-weight: bolder;
+        }
+
+        #btn {
+            border: none;
+            outline: none;
+            background: #ecf0f3;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+            font-weight: bold;
+        }
+
+        p {
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>
+            Find the Largest Among Three Numbers
+        </h1>
+
+        <label for="first">Enter the first number : </label>
+        <input type="number" name="" id="first"><br> <br>
+
+        <label for="second">Enter the second number : </label>
+        <input type="number" name="" id="second"> <br><br>
+
+        <label for="third">Enter the second number : </label>
+        <input type="number" name="" id="third"> <br><br>
+
+        <button id="btn" onclick="find()">Calculate Area</button>
+
+        <p id="result"></p>
+
+    </div>
+
+    <script>
+        function find() {
+
+            var first = document.getElementById("first").value;
+            var second = document.getElementById("second").value;
+            var third = document.getElementById("third").value;
+
+            var largest = Math.max(first, second, third);
+
+            document.getElementById("result").innerHTML = "The largest number is " + largest;
+        }
+    </script>
+</body>
+
+</html>
